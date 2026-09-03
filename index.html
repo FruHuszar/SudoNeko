@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#7C6CF0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SudoNeko" />
+    <meta name="application-name" content="SudoNeko" />
+    <meta name="author" content="Fruzsina Anna Huszár" />
+    <meta name="description" content="SudoNeko is a free cat logic puzzle in your browser: place one cat per row, column and colour patch, never side by side. Hundreds of levels from 5×5 to 9×9, offline play, custom cats and colour themes." />
+    <meta name="keywords" content="sudoneko, cat puzzle, logic puzzle, queens puzzle, sudoku like game, browser game, pwa game" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="https://fruhuszar.github.io/sudoneko/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SudoNeko" />
+    <meta property="og:title" content="SudoNeko — a cat logic puzzle" />
+    <meta property="og:description" content="Place one cat per row, column and colour patch. Hundreds of hand-rated levels, offline play, custom cats and colour themes." />
+    <meta property="og:url" content="https://fruhuszar.github.io/sudoneko/" />
+    <meta property="og:image" content="https://fruhuszar.github.io/sudoneko/icons/icon-512.png" />
+    <meta property="og:image:alt" content="The SudoNeko cat" />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SudoNeko — a cat logic puzzle" />
+    <meta name="twitter:description" content="Place one cat per row, column and colour patch. Hundreds of levels, offline play, custom cats." />
+    <meta name="twitter:image" content="https://fruhuszar.github.io/sudoneko/icons/icon-512.png" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>SudoNeko — a cat logic puzzle</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "SudoNeko",
+        "alternateName": "SudoNeko cat puzzle",
+        "url": "https://fruhuszar.github.io/sudoneko/",
+        "description": "A cat logic puzzle: place one cat per row, per column and per colour patch, and never let two cats touch. Hundreds of levels from 5×5 to 9×9, playable offline.",
+        "image": "https://fruhuszar.github.io/sudoneko/icons/icon-512.png",
+        "inLanguage": "en",
+        "genre": ["Puzzle", "Logic"],
+        "gamePlatform": ["Web browser", "Android", "iOS"],
+        "playMode": "SinglePlayer",
+        "applicationCategory": "GameApplication",
+        "applicationSubCategory": "Puzzle",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript and a modern browser",
+        "isAccessibleForFree": true,
+        "isFamilyFriendly": true,
+        "datePublished": "2026-09-03",
+        "author": {
+          "@type": "Person",
+          "name": "Fruzsina Anna Huszár"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.installPrompt = null;
+      window.appInstalled = false;
+      window.addEventListener('beforeinstallprompt', function (event) {
+        event.preventDefault();
+        window.installPrompt = event;
+        window.dispatchEvent(new Event('installchange'));
+      });
+      window.addEventListener('appinstalled', function () {
+        window.installPrompt = null;
+        window.appInstalled = true;
+      window.appInstalled = false;
+        window.dispatchEvent(new Event('installchange'));
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
